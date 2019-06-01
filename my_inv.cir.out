@@ -1,4 +1,3 @@
-* home/kunalg/esim-workspace/my_inv/my_inv.cir
 
 .include test_inv.sub
 xu1 test_in vdd test_out  test_inv
