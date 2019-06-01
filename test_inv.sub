@@ -1,6 +1,5 @@
 * Subcircuit test_inv
 .subckt test_inv in vdd out 
-* home/kunalg/desktop/work/tools/esim/esim-1.1.2/src/subcircuitlibrary/test_inv/test_inv.cir
 .include NMOS-180nm.lib
 .include PMOS-180nm.lib
 m1 out in gnd gnd CMOSN W=0.36u L=0.18u M=1
