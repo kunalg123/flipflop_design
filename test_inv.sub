@@ -1,9 +1,0 @@
-* Subcircuit test_inv
-.subckt test_inv in vdd out 
-.include NMOS-180nm.lib
-.include PMOS-180nm.lib
-m1 out in gnd gnd CMOSN W=0.36u L=0.18u M=1
-m2 out in vdd vdd CMOSP W=0.9u L=0.18u M=1
-* Control Statements
-
-.ends test_inv
