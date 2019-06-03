@@ -1,9 +1,14 @@
 # flipflop_design
 This project has files needed to design and characterise flipflop
+
 Follow below steps to download Layout and run SPICE
+
 git clone https://github.com/kunalg123/flipflop_design.git
+
 magic -T min2.tech inv2.mag & --> This will open a MAGIC window with minimum sized inverter layout
+
 With the above step, you can review the inverter, zoom in, zoom out, look into all layers and so on. To learn more about how the layout was drawn, what is tech file and what are its layers, refer to my below online "Custom Layout" course:
+
 https://www.udemy.com/vlsi-academy-custom-layout/
 
 To simulate the above Layout, use the below command
