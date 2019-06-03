@@ -1,6 +1,6 @@
 magic
 tech min2
-timestamp 1559507145
+timestamp 1559510080
 << polysilicon >>
 rect 50 24 52 26
 << metal1 >>
@@ -54,8 +54,8 @@ timestamp 1559497013
 transform 1 0 131 0 1 15
 box -5 -15 30 34
 << labels >>
-rlabel metal2 56 23 56 23 1 clk_in
-rlabel metal2 52 19 52 19 1 din
-rlabel metal2 128 18 128 18 1 q_bar
-rlabel metal2 127 11 127 11 1 q
+rlabel m2contact 5 22 5 22 3 din
+rlabel metal1 55 25 55 25 1 clk
+rlabel m2contact 111 10 111 10 1 q_bar
+rlabel m2contact 120 22 120 22 1 q
 << end >>
