@@ -1,0 +1,86 @@
+* SPICE3 file created from dff.ext - technology: min2
+
+.option scale=0.1u
+* User needs to add below 2 lines to include spice model files*
+.include NMOS-180nm.lib
+.include PMOS-180nm.lib
+
+M1000 q nand1_3/a vdd vdd pfet w=8 l=2
++  ad=48 pd=28 as=424 ps=250
+M1001 vdd q_bar q vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1002 nand1_3/a_10_n6# nand1_3/a q gnd nfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1003 gnd q_bar nand1_3/a_10_n6# gnd nfet w=8 l=2
++  ad=232 pd=138 as=0 ps=0
+M1004 q_bar nand1_2/a vdd vdd pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1005 vdd q q_bar vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 nand1_2/a_10_n6# nand1_2/a q_bar gnd nfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1007 gnd q nand1_2/a_10_n6# gnd nfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 nand1_2/a clk vdd vdd pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1009 vdd din nand1_2/a vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 nand1_1/a_10_n6# clk nand1_2/a gnd nfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1011 gnd din nand1_1/a_10_n6# gnd nfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1012 nand1_3/a nand1_0/a vdd vdd pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1013 vdd clk nand1_3/a vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 nand1_0/a_10_n6# nand1_0/a nand1_3/a gnd nfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1015 gnd clk nand1_0/a_10_n6# gnd nfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 nand1_0/a din vdd vdd pfet w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1017 nand1_0/a din gnd gnd nfet w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+C0 din clk 0.15fF
+C1 vdd nand1_0/a 0.30fF
+C2 q_bar q 0.34fF
+C3 vdd nand1_3/a 0.31fF
+C4 clk nand1_2/a 0.03fF
+C5 nand1_3/a q 0.18fF
+C6 q_bar nand1_3/a 0.10fF
+C7 vdd clk 0.29fF
+C8 nand1_3/a nand1_0/a 0.09fF
+C9 nand1_0/a clk 0.07fF
+C10 nand1_3/a clk 0.05fF
+C11 nand1_1/a_10_n6# nand1_2/a 0.03fF
+C12 q_bar nand1_2/a_10_n6# 0.03fF
+C13 din nand1_2/a 0.35fF
+C14 vdd din 0.21fF
+C15 vdd nand1_2/a 0.18fF
+C16 nand1_2/a q 0.07fF
+C17 nand1_0/a din 0.09fF
+C18 q_bar nand1_2/a 0.04fF
+C19 nand1_3/a din 0.52fF
+C20 q_bar nand1_3/a_10_n6# 0.01fF
+C21 vdd q 0.13fF
+C22 vdd q_bar 0.13fF
+C23 nand1_3/a nand1_2/a 0.11fF
+C24 nand1_0/a gnd 0.21fF
+C25 din gnd 0.48fF
+C26 clk gnd 0.29fF
+C27 nand1_2/a gnd 0.36fF
+C28 q gnd 0.23fF
+C29 q_bar gnd 0.26fF
+C30 nand1_3/a gnd 0.25fF
+C31 vdd gnd 3.08fF
+
+
+* User needs to add below lines for simulation*
+Vdd vdd gnd 1.8
+Vdin din gnd pulse(0 1.8 1p 10p 10p 1.5n 2.5n)
+Vclk clk gnd pulse(0 1.8 0.2n 10p 10p 1n 2n)
+.tran 10e-12 20e-09 0e-00
+.control
+run
+.endc
+.end
