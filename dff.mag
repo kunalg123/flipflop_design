@@ -1,0 +1,61 @@
+magic
+tech min2
+timestamp 1559507145
+<< polysilicon >>
+rect 50 24 52 26
+<< metal1 >>
+rect 50 24 58 26
+rect 54 23 58 24
+rect 55 22 58 23
+rect 25 19 29 22
+rect 66 13 79 16
+rect 104 13 113 16
+<< m2contact >>
+rect 40 29 44 33
+rect 2 20 6 24
+rect 92 22 96 26
+rect 84 18 88 22
+rect 118 20 122 24
+rect 126 23 130 27
+rect 134 17 138 21
+rect 152 20 156 24
+rect 75 9 79 13
+rect 109 9 113 13
+<< metal2 >>
+rect 44 29 130 33
+rect 126 27 130 29
+rect 6 22 88 24
+rect 6 20 84 22
+rect 2 18 84 20
+rect 96 22 97 26
+rect 92 13 96 22
+rect 118 17 134 20
+rect 152 13 156 20
+rect 79 9 96 13
+rect 113 9 156 13
+use inv2  inv2_0
+timestamp 1559498764
+transform 1 0 3 0 1 23
+box -3 -23 25 26
+use nand1  nand1_0
+timestamp 1559497013
+transform 1 0 29 0 1 15
+box -5 -15 30 34
+use nand1  nand1_1
+timestamp 1559497013
+transform 1 0 63 0 1 15
+box -5 -15 30 34
+use nand1  nand1_2
+timestamp 1559497013
+transform 1 0 97 0 1 15
+box -5 -15 30 34
+use nand1  nand1_3
+timestamp 1559497013
+transform 1 0 131 0 1 15
+box -5 -15 30 34
+<< labels >>
+rlabel metal2 56 23 56 23 1 clk_in
+rlabel metal2 52 19 52 19 1 din
+rlabel metal2 128 18 128 18 1 q_bar
+rlabel metal2 127 11 127 11 1 q
+<< end >>
